@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "orderKind.png"
+      "filename" : "stationLogo.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "orderKind@2x.png"
+      "filename" : "stationLogo@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "orderKind@3x.png"
+      "filename" : "stationLogo@3x.png"
     }
   ],
   "info" : {

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E4C90D0F-80F1-4383-A569-CFBCE28A0F7B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PublicBicycleApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>38D9009B322140394B9DA7467F68950B56B35FF5</key>
+		<string>github.com:daltoniam/SwiftHTTP.git</string>
+		<key>B549F0FFC00D81822B9A0138BD129EB3945634CA</key>
+		<string>github.com:MarK-YANG/PublicBicycleApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PublicBicycleApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>38D9009B322140394B9DA7467F68950B56B35FF5</key>
+		<string>../../../SwiftHTTP</string>
+		<key>B549F0FFC00D81822B9A0138BD129EB3945634CA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:MarK-YANG/PublicBicycleApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B549F0FFC00D81822B9A0138BD129EB3945634CA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B549F0FFC00D81822B9A0138BD129EB3945634CA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PublicBicycleApp</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>38D9009B322140394B9DA7467F68950B56B35FF5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SwiftHTTP</string>
+		</dict>
+	</array>
+</dict>
+</plist>

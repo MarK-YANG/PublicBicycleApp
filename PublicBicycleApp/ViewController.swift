@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import SwiftHTTP
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
 
+
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,13 +29,60 @@ class ViewController: UIViewController {
         //tabBarController
         //self.tabBarController?.tabBar.barTintColor = mainColor
         //self.tabBarController?.tabBar.tintColor = UIColor.whiteColor()
+        
+        
+        var URL = "http://10.20.46.218/PublicBicycleReservationSystem/APP/API/test.php"
+        var request = HTTPTask()
+        
+        request.POST(URL,
+            parameters: ["HEL":"HEL"],
+            success: {(response:HTTPResponse) -> Void in
+                if response.responseObject != nil{
+                    let data = response.responseObject as! NSData
+                    
+                    let json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as? NSDictionary
+                    
+                    println(json)
+                    
+                }
+            },failure:{(error:NSError,response: HTTPResponse?) -> Void in
+                println(error.description)
+                println(error.code)
+        })
+
+        
+        
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return 3
+    }
+    
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        
+        var cell : UITableViewCell
+        
+        if indexPath.row == 0{
+            cell = self.tableView.dequeueReusableCellWithIdentifier("ReserveTableCell1") as! UITableViewCell
+        }else if indexPath.row == 1{
+            cell = self.tableView.dequeueReusableCellWithIdentifier("ReserveTableCell2") as! UITableViewCell
+        }else if indexPath.row == 2{
+            cell = self.tableView.dequeueReusableCellWithIdentifier("ReserveTableCell3") as! UITableViewCell
+        }else{
+            cell = self.tableView.dequeueReusableCellWithIdentifier("ReserveTableCell1") as! UITableViewCell
+        }
+        
+        return cell
+    }
 
 }
 
