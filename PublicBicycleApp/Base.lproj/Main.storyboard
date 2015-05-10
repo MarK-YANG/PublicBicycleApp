@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7QL-px-ALp">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--预约-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PublicBicycleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="预约" id="j13-FM-BCr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1802" y="216"/>
+        </scene>
+        <!--服务站-->
+        <scene sceneID="zFM-Er-K5A">
+            <objects>
+                <viewController id="HZS-Xd-QGF" customClass="StationViewController" customModule="PublicBicycleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wgK-IB-t0N"/>
+                        <viewControllerLayoutGuide type="bottom" id="57M-dz-xmA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ngp-hZ-5H8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="服务站" id="5Oh-qX-Xzu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o6b-oe-xdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3352" y="1199"/>
+        </scene>
+        <!--预约-->
+        <scene sceneID="uqK-y2-Zna">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zip-qC-0Mp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="预约" image="reservation-bar" id="maF-IW-2lv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o02-Sq-25r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Kbs-VN-8qG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ma5-Jt-nxl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1270" y="222"/>
+        </scene>
+        <!--预约订单-->
+        <scene sceneID="o6c-MG-nCe">
+            <objects>
+                <viewController id="cT5-Ac-4mR" customClass="OrderViewController" customModule="PublicBicycleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PAa-L0-Fmc"/>
+                        <viewControllerLayoutGuide type="bottom" id="9vS-32-c1o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ykI-C6-hse">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="预约订单" id="Khe-aV-mCV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jYX-L9-B3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2302" y="1208"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Dwv-ND-Wf4">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7QL-px-ALp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="46q-2c-L3F">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="zip-qC-0Mp" kind="relationship" relationship="viewControllers" id="2lE-gz-7ea"/>
+                        <segue destination="FcT-AQ-azq" kind="relationship" relationship="viewControllers" id="9m2-yr-26v"/>
+                        <segue destination="6LF-oR-oEm" kind="relationship" relationship="viewControllers" id="LWC-Zi-5WW"/>
+                        <segue destination="frv-Eo-7Mb" kind="relationship" relationship="viewControllers" id="YZu-EA-sWy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wyc-9q-pZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="222"/>
+        </scene>
+        <!--服务站-->
+        <scene sceneID="FI1-uW-uTD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FcT-AQ-azq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="服务站" image="station-bar" id="bqr-hy-Qyj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DLm-AR-log">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HZS-Xd-QGF" kind="relationship" relationship="rootViewController" id="6dU-ez-5MD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mVe-6o-45g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2782" y="1199"/>
+        </scene>
+        <!--个人中心-->
+        <scene sceneID="64E-CP-iEm">
+            <objects>
+                <viewController id="41V-rg-sF8" customClass="InfoViewController" customModule="PublicBicycleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GnK-AM-RAy"/>
+                        <viewControllerLayoutGuide type="bottom" id="sc9-WC-PgQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Baw-1X-ZGw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="个人中心" id="iuh-ir-QVs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUe-I5-VON" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="1199"/>
+        </scene>
+        <!--预约订单-->
+        <scene sceneID="hfM-I5-iTT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6LF-oR-oEm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="预约订单" image="order-bar" id="Qvq-Bm-bcQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jSa-7i-eaC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cT5-Ac-4mR" kind="relationship" relationship="rootViewController" id="BwF-kM-JPx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0Z-OU-afS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="1208"/>
+        </scene>
+        <!--个人中心-->
+        <scene sceneID="XSc-ey-B28">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="frv-Eo-7Mb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="个人中心" image="info-bar" id="zx3-Bi-t8l"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QnF-Nl-N2P">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="41V-rg-sF8" kind="relationship" relationship="rootViewController" id="gDt-dE-TQa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SbA-zp-7cq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530" y="1199"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info-bar" width="9" height="19"/>
+        <image name="order-bar" width="21" height="21"/>
+        <image name="reservation-bar" width="19" height="18"/>
+        <image name="station-bar" width="23" height="18"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
