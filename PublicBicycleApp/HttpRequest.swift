@@ -10,68 +10,77 @@ import UIKit
 import SwiftHTTP
 
 
-class HttpRequest{
+class HttpRequest: NSObject{
     
-    var baseURL: String = "http://10.20.46.218/PublicBicycleReservationSystem/APP/API/"
-    var URL:String?
-    var parameters: Dictionary<String, AnyObject>?
-    var requestType:String?
+    let baseURL: String = "http://180.161.177.183/PublicBicycleReservationSystem/APP/API/"
+    var URL:String
+    var parameters: Dictionary<String, AnyObject>
+    var jsonCode = NSDictionary()
+    var requestStates = false
     
-    init(){
-        URL = nil
-        parameters = nil
-        requestType = nil
+    override init(){
+        self.URL = ""
+        self.parameters = ["EMPTY":"EMPTY"]
     }
     
-//    init(url: String, parameters: Dictionary<String, AnyObject>, requestType: String){
-//        self.URL = url
-//        self.parameters = parameters
-//        self.requestType = requestType
-//    }
+    init(url: String, parameters: Dictionary<String, AnyObject>){
+        self.URL = url
+        self.parameters = parameters
+    }
     
-    func doRequest() -> NSData?{
+    func print(){
+        println(self.baseURL + self.URL)
+        println(self.parameters)
+    }
+    
+    func doPOST(){
         var request = HTTPTask()
         
-        var data: NSData?
-        
-        if self.requestType == "POST"{
-            request.POST(self.baseURL + self.URL!,
-                parameters: self.parameters,
-                success: {(response:HTTPResponse) -> Void in
-                    if response.responseObject != nil{
-                        data = response.responseObject as! NSData
-                        
-//                        let json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as? NSDictionary
-                        
-                    }
-                },failure:{(error:NSError,response: HTTPResponse?) -> Void in
-                    println(error.description)
-                    println(error.code)
-            })
-            
-            return data
-        }else if self.requestType == "GET"{
-            request.GET(self.baseURL + self.URL!,
-                parameters: self.parameters,
-                success: {(response:HTTPResponse) -> Void in
-                    if response.responseObject != nil{
-                        data = response.responseObject as! NSData
-                        
-                    }
-                },failure:{(error:NSError,response: HTTPResponse?) -> Void in
-                    println(error.description)
-                    println(error.code)
-            })
-            
-            return data
+        request.POST(self.baseURL + self.URL,
+            parameters: self.parameters,
+            success: {(response:HTTPResponse) in
+                if response.responseObject != nil{
+                    
+                    let data = response.responseObject as! NSData
+                    let json = (NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as? NSDictionary)!
+                    self.jsonCode = json
+                    self.requestStates = true
+                    
+                }
+            },failure:{(error:NSError,response: HTTPResponse?) in
+                println(error.description)
+                println(error.code)
+                
+        })
 
-        }else{
-            return data;
-        }
-        
     }
     
+    func doGET(){
+        var request = HTTPTask()
+        
+        request.GET(self.baseURL + self.URL,
+            parameters: self.parameters,
+            success: {(response:HTTPResponse) -> Void in
+                if response.responseObject != nil{
+                    let data = response.responseObject as! NSData
+                    var result = (NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as? NSDictionary)!
+                    
+                }
+            },failure:{(error:NSError,response: HTTPResponse?) -> Void in
+                println(error.description)
+                println(error.code)
+        })
+
+    }
     
-    
+    func getJsonDecode()-> NSDictionary{
+        doPOST()
+        while true{
+            if self.requestStates{
+                break
+            }
+        }
+        return self.jsonCode
+    }
     
 }

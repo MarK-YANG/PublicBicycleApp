@@ -30,29 +30,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         //self.tabBarController?.tabBar.barTintColor = mainColor
         //self.tabBarController?.tabBar.tintColor = UIColor.whiteColor()
         
-        
-        var URL = "http://10.20.46.218/PublicBicycleReservationSystem/APP/API/test.php"
-        var request = HTTPTask()
-        
-        request.POST(URL,
-            parameters: ["HEL":"HEL"],
-            success: {(response:HTTPResponse) -> Void in
-                if response.responseObject != nil{
-                    let data = response.responseObject as! NSData
-                    
-                    let json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as? NSDictionary
-                    
-                    println(json)
-                    
-                }
-            },failure:{(error:NSError,response: HTTPResponse?) -> Void in
-                println(error.description)
-                println(error.code)
-        })
 
-        
-        
-        
     }
     
 
@@ -83,6 +61,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
-
+    
+    
 }
 

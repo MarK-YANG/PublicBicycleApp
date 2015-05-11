@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D91BA1F1B00B2FB00456EE5 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91BA181B00B2F500456EE5 /* SwiftHTTP.framework */; };
 		4D922F041AFF037E00DA60D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D922F031AFF037E00DA60D5 /* AppDelegate.swift */; };
 		4D922F061AFF037E00DA60D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D922F051AFF037E00DA60D5 /* ViewController.swift */; };
 		4D922F091AFF037E00DA60D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D922F071AFF037E00DA60D5 /* Main.storyboard */; };
@@ -19,11 +20,38 @@
 		4D922FB71AFF972C00DA60D5 /* OrderStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D922FB61AFF972C00DA60D5 /* OrderStationViewController.swift */; };
 		4D922FB91AFF976600DA60D5 /* BlueUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D922FB81AFF976600DA60D5 /* BlueUIViewController.swift */; };
 		4D922FBC1AFF9ACC00DA60D5 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D922FBB1AFF9ACC00DA60D5 /* HttpRequest.swift */; };
-		4D92308B1AFFA29F00DA60D5 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9230841AFFA27900DA60D5 /* SwiftHTTP.framework */; };
 		4D92308D1AFFA4AB00DA60D5 /* MyStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92308C1AFFA4AB00DA60D5 /* MyStation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4D91BA171B00B2F500456EE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D91BA101B00B2F500456EE5 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD901619C8D8B500DD99B6;
+			remoteInfo = SwiftHTTP;
+		};
+		4D91BA191B00B2F500456EE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D91BA101B00B2F500456EE5 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD902119C8D8B500DD99B6;
+			remoteInfo = SwiftHTTPTests;
+		};
+		4D91BA1B1B00B2F500456EE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D91BA101B00B2F500456EE5 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958025919E6EEEB003C8218;
+			remoteInfo = SwiftHTTPOSX;
+		};
+		4D91BA1D1B00B2F500456EE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D91BA101B00B2F500456EE5 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958026319E6EEEB003C8218;
+			remoteInfo = SwiftHTTPOSXTests;
+		};
 		4D922F141AFF037E00DA60D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D922EF61AFF037E00DA60D5 /* Project object */;
@@ -31,37 +59,10 @@
 			remoteGlobalIDString = 4D922EFD1AFF037E00DA60D5;
 			remoteInfo = PublicBicycleApp;
 		};
-		4D9230831AFFA27900DA60D5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D92307C1AFFA27900DA60D5 /* SwiftHTTP.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6BFD901619C8D8B500DD99B6;
-			remoteInfo = SwiftHTTP;
-		};
-		4D9230851AFFA27900DA60D5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D92307C1AFFA27900DA60D5 /* SwiftHTTP.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6BFD902119C8D8B500DD99B6;
-			remoteInfo = SwiftHTTPTests;
-		};
-		4D9230871AFFA27900DA60D5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D92307C1AFFA27900DA60D5 /* SwiftHTTP.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D958025919E6EEEB003C8218;
-			remoteInfo = SwiftHTTPOSX;
-		};
-		4D9230891AFFA27900DA60D5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D92307C1AFFA27900DA60D5 /* SwiftHTTP.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D958026319E6EEEB003C8218;
-			remoteInfo = SwiftHTTPOSXTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D91BA101B00B2F500456EE5 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = ../../GitHub/SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
 		4D922EFE1AFF037E00DA60D5 /* PublicBicycleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublicBicycleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D922F021AFF037E00DA60D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D922F031AFF037E00DA60D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		4D922FB61AFF972C00DA60D5 /* OrderStationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderStationViewController.swift; sourceTree = "<group>"; };
 		4D922FB81AFF976600DA60D5 /* BlueUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueUIViewController.swift; sourceTree = "<group>"; };
 		4D922FBB1AFF9ACC00DA60D5 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
-		4D92307C1AFFA27900DA60D5 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = ../../GitHub/SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
 		4D92308C1AFFA4AB00DA60D5 /* MyStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D92308B1AFFA29F00DA60D5 /* SwiftHTTP.framework in Frameworks */,
+				4D91BA1F1B00B2FB00456EE5 /* SwiftHTTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,10 +101,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D91BA111B00B2F500456EE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D91BA181B00B2F500456EE5 /* SwiftHTTP.framework */,
+				4D91BA1A1B00B2F500456EE5 /* SwiftHTTPTests.xctest */,
+				4D91BA1C1B00B2F500456EE5 /* SwiftHTTP.framework */,
+				4D91BA1E1B00B2F500456EE5 /* SwiftHTTPOSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4D922EF51AFF037E00DA60D5 = {
 			isa = PBXGroup;
 			children = (
-				4D92307C1AFFA27900DA60D5 /* SwiftHTTP.xcodeproj */,
+				4D91BA101B00B2F500456EE5 /* SwiftHTTP.xcodeproj */,
 				4D922F001AFF037E00DA60D5 /* PublicBicycleApp */,
 				4D922F161AFF037E00DA60D5 /* PublicBicycleAppTests */,
 				4D922EFF1AFF037E00DA60D5 /* Products */,
@@ -181,17 +192,6 @@
 			name = HTTP;
 			sourceTree = "<group>";
 		};
-		4D92307D1AFFA27900DA60D5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4D9230841AFFA27900DA60D5 /* SwiftHTTP.framework */,
-				4D9230861AFFA27900DA60D5 /* SwiftHTTPTests.xctest */,
-				4D9230881AFFA27900DA60D5 /* SwiftHTTP.framework */,
-				4D92308A1AFFA27900DA60D5 /* SwiftHTTPOSXTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,8 +261,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 4D92307D1AFFA27900DA60D5 /* Products */;
-					ProjectRef = 4D92307C1AFFA27900DA60D5 /* SwiftHTTP.xcodeproj */;
+					ProductGroup = 4D91BA111B00B2F500456EE5 /* Products */;
+					ProjectRef = 4D91BA101B00B2F500456EE5 /* SwiftHTTP.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -274,32 +274,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		4D9230841AFFA27900DA60D5 /* SwiftHTTP.framework */ = {
+		4D91BA181B00B2F500456EE5 /* SwiftHTTP.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SwiftHTTP.framework;
-			remoteRef = 4D9230831AFFA27900DA60D5 /* PBXContainerItemProxy */;
+			remoteRef = 4D91BA171B00B2F500456EE5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		4D9230861AFFA27900DA60D5 /* SwiftHTTPTests.xctest */ = {
+		4D91BA1A1B00B2F500456EE5 /* SwiftHTTPTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = SwiftHTTPTests.xctest;
-			remoteRef = 4D9230851AFFA27900DA60D5 /* PBXContainerItemProxy */;
+			remoteRef = 4D91BA191B00B2F500456EE5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		4D9230881AFFA27900DA60D5 /* SwiftHTTP.framework */ = {
+		4D91BA1C1B00B2F500456EE5 /* SwiftHTTP.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SwiftHTTP.framework;
-			remoteRef = 4D9230871AFFA27900DA60D5 /* PBXContainerItemProxy */;
+			remoteRef = 4D91BA1B1B00B2F500456EE5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		4D92308A1AFFA27900DA60D5 /* SwiftHTTPOSXTests.xctest */ = {
+		4D91BA1E1B00B2F500456EE5 /* SwiftHTTPOSXTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = SwiftHTTPOSXTests.xctest;
-			remoteRef = 4D9230891AFFA27900DA60D5 /* PBXContainerItemProxy */;
+			remoteRef = 4D91BA1D1B00B2F500456EE5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

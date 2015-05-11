@@ -29,7 +29,7 @@ class OrderStationViewController: BlueUIViewController, UITableViewDataSource {
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return 10
+        return self.stationArray.count
     }
     
     
@@ -43,13 +43,26 @@ class OrderStationViewController: BlueUIViewController, UITableViewDataSource {
     }
     
     func getAllStation(){
-        var http: HttpRequest = HttpRequest()
-        http.URL = "test.php"
-        http.parameters = ["Hello":"NIHAO"]
-        http.requestType = "POST"
         
-        
-                
+        var http = HttpRequest(url: "station.php", parameters: ["tag": "allStationStatus"])
+        var json = http.getJsonDecode()
+        if(json.valueForKey("error") as! Int == 0){
+            
+            let stationArray = json.valueForKey("stationStatus") as! NSArray
+            
+            for station in stationArray{
+                let dicStation = station as! NSDictionary
+                var iStation = MyStation(bike_count: dicStation["available_bike_count"] as! Int, parkingspace_count: dicStation["available_parkingspace_count"] as! Int,
+                    station_address: dicStation["station_address"] as! String,
+                    station_id: dicStation["station_id"] as! String,
+                    station_name: dicStation["station_name"] as! String,
+                    station_phone_num: dicStation["station_phone_number"] as! String)
+                self.stationArray.append(iStation)
+            }
+            
+        }else{
+            //open an error window
+        }
     }
 
 }
