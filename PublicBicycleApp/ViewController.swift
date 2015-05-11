@@ -8,8 +8,11 @@
 
 import UIKit
 import SwiftHTTP
+protocol OrderStationDelegate{
+    func getValue(station:MyStation)
+}
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 
     @IBOutlet weak var tableView: UITableView!
@@ -33,6 +36,18 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if indexPath.row == 0{
+//            var info :OrderStationViewController = OrderStationViewController()
+//            self.navigationController?.pushViewController(info, animated: false)
+            var info:OrderStationViewController = self.storyboard?.instantiateViewControllerWithIdentifier("OrderStationViewController") as! OrderStationViewController
+            self.navigationController?.pushViewController(info, animated: true)
+            
+            println("\(indexPath.row)")
+        }
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
