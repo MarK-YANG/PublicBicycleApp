@@ -24,6 +24,7 @@
 		4DA08C861B00CE54009671BF /* StationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA08C851B00CE54009671BF /* StationInfoViewController.swift */; };
 		4DA08C8C1B00E6D5009671BF /* ReserveOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA08C8B1B00E6D5009671BF /* ReserveOrderViewController.swift */; };
 		4DA08C8E1B00F66D009671BF /* OrderTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA08C8D1B00F66D009671BF /* OrderTypeViewController.swift */; };
+		4DA08C911B021658009671BF /* AddBookOrderSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA08C901B021658009671BF /* AddBookOrderSuccess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		4DA08C851B00CE54009671BF /* StationInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationInfoViewController.swift; sourceTree = "<group>"; };
 		4DA08C8B1B00E6D5009671BF /* ReserveOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveOrderViewController.swift; sourceTree = "<group>"; };
 		4DA08C8D1B00F66D009671BF /* OrderTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTypeViewController.swift; sourceTree = "<group>"; };
+		4DA08C901B021658009671BF /* AddBookOrderSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookOrderSuccess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				4D922FB51AFF95A900DA60D5 /* Entity */,
 				4D922F031AFF037E00DA60D5 /* AppDelegate.swift */,
 				4D922F051AFF037E00DA60D5 /* ViewController.swift */,
+				4DA08C901B021658009671BF /* AddBookOrderSuccess.swift */,
 				4DA08C8B1B00E6D5009671BF /* ReserveOrderViewController.swift */,
 				4DA08C851B00CE54009671BF /* StationInfoViewController.swift */,
 				4D922FB61AFF972C00DA60D5 /* OrderStationViewController.swift */,
@@ -339,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D922FB71AFF972C00DA60D5 /* OrderStationViewController.swift in Sources */,
+				4DA08C911B021658009671BF /* AddBookOrderSuccess.swift in Sources */,
 				4DA08C8E1B00F66D009671BF /* OrderTypeViewController.swift in Sources */,
 				4D92308D1AFFA4AB00DA60D5 /* MyStation.swift in Sources */,
 				4D922F241AFF193C00DA60D5 /* StationViewController.swift in Sources */,

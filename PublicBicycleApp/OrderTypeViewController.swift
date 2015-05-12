@@ -35,7 +35,6 @@ class OrderTypeViewController: UITableViewController, UITableViewDelegate {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         self.delegate.getOrderType(indexPath.row)
-        println("\(indexPath.row)")
         
         self.navigationController?.popViewControllerAnimated(true)
     }

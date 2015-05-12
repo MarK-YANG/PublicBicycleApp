@@ -80,7 +80,77 @@ class ReserveOrderViewController: UITableViewController, OrderStationViewDelegat
     }
     
     @IBAction func buttonDidClicked(sender: AnyObject) {
-        println(currentStation?.station_id)
-        println("\(orderType)")
+        
+        if currentStation == nil {
+            var alert : UIAlertView = UIAlertView(title: "请选择一个服务站", message: nil, delegate: nil, cancelButtonTitle: "确定")
+            alert.show()
+        }else if orderType == nil{
+            var alert : UIAlertView = UIAlertView(title: "请选择订单类型", message: nil, delegate: nil, cancelButtonTitle: "确定")
+            alert.show()
+        }else{
+            if orderType == 0{
+                
+                //request to the web server
+                var customerId = "emp.yangchunyu@gmail.com"
+                var response = createBikeBookOrder(customerId, stationId: currentStation!.station_id) as NSDictionary
+                
+                if(response.valueForKey("error") as! Int == 1){
+                    
+                    //add order failed
+                    
+                    if(response.valueForKey("error_msg") as! String == "cannot create another order with a unfinished order !"){
+                        
+                        //there is an unfinished order
+                        var alert : UIAlertView = UIAlertView(title: "不可以同时创建两个预约订单，请先完成未完成的预约订单", message: nil, delegate: nil, cancelButtonTitle: "确定")
+                        alert.show()
+                    }else if (response.valueForKey("error_msg") as! String == "There is no available bikes at this station!"){
+                        
+                        //there is no available bikes
+                        var alert : UIAlertView = UIAlertView(title: "该服务站没有可预约的自行车，请选择其他服务站", message: nil, delegate: nil, cancelButtonTitle: "确定")
+                        alert.show()
+                    }
+                }else{
+                    //add order success
+                    var bikeOrderInfo = response.valueForKey("order") as! NSDictionary
+                    var info: AddBookOrderSuccess = self.storyboard?.instantiateViewControllerWithIdentifier("AddBookOrderSuccess") as! AddBookOrderSuccess
+                    info.orderInfoDic = bikeOrderInfo
+                    info.orderType = "BikeBook"
+                    self.navigationController?.pushViewController(info, animated: true)
+                    
+                }
+                
+            }else if orderType == 1{
+                //request to the web server
+                var customerId = "emp.yangchunyu@gmail.com"
+                var response = createParkingspaceBookOrder(customerId, stationId: currentStation!.station_id) as NSDictionary
+                
+                if(response.valueForKey("error") as! Int == 1){
+                    //add order failed
+                    
+                    if(response.valueForKey("error_msg") as! String == "cannot create another order with a unfinished order !" ){
+                        //
+                    }
+                }
+            }
+        }
+
+    }
+    
+    func createBikeBookOrder(customerId: String, stationId: String)-> NSDictionary{
+        var request = HttpRequest(url: "bikeBook.php", parameters: ["tag": "add", "customer_id": customerId, "station_id": stationId])
+        
+        var json = request.getJsonDecode()
+        
+        return json
+    }
+    
+    func createParkingspaceBookOrder(customerId: String, stationId: String)->NSDictionary{
+        
+        var request = HttpRequest(url: "parkingspaceBook.php", parameters: ["tag": "add", "customer_id": customerId, "station_id": stationId])
+        
+        var json = request.getJsonDecode()
+        
+        return json
+
     }
 }

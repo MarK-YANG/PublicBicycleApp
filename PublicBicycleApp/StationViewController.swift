@@ -37,11 +37,9 @@ class StationViewController: BlueUIViewController, UITableViewDataSource {
         var station = self.stationArray[indexPath.row] as MyStation
         var station_name = cell.viewWithTag(101) as! UILabel
         var station_address = cell.viewWithTag(102) as! UILabel
-        var station_status = cell.viewWithTag(103) as! UILabel
         
         station_name.text = station.station_name
         station_address.text = station.station_address
-        station_status.text = "自行车：\(station.bike_count) | 停车位：\(station.parkingspace_count)"
         
         
         return cell
