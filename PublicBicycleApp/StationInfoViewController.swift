@@ -10,6 +10,7 @@ import UIKit
 
 class StationInfoViewController: UITableViewController {
 
+    @IBOutlet weak var stationNameBig: UILabel!
     @IBOutlet weak var station_name: UILabel!
     @IBOutlet weak var station_address: UILabel!
     @IBOutlet weak var station_phone_num: UILabel!
@@ -28,17 +29,16 @@ class StationInfoViewController: UITableViewController {
 
         let navigationTitleAttribute : NSDictionary = NSDictionary(objectsAndKeys: UIColor.whiteColor(),NSForegroundColorAttributeName)
         self.navigationController?.navigationBar.titleTextAttributes = navigationTitleAttribute as [NSObject : AnyObject]
-        //tabBarController
-        //self.tabBarController?.tabBar.barTintColor = mainColor
-        //self.tabBarController?.tabBar.tintColor = UIColor.whiteColor()
+        
         
         if station == nil {
+            stationNameBig.text = ""
             station_name.text = ""
             station_address.text = ""
             station_phone_num.text = ""
         }else{
+            stationNameBig.text = station?.station_name
             station_name.text = station?.station_name
-            
             station_address.text = station?.station_address
             station_address.numberOfLines = 2
             station_phone_num.text = station?.station_phone_num

@@ -51,16 +51,30 @@ class AddBookOrderSuccess: UITableViewController {
     @IBAction func orderCancelDidClicked(sender: AnyObject) {
         if self.orderType == "BikeBook" {
             
-            cancelBikeBookOrder((self.orderInfoDic?.valueForKey("id") as? String)!)
+            cancelBikeBookOrder(self.orderInfoDic?.valueForKey("id") as! String)
             
         }else if self.orderType == "ParkingspaceBook" {
-            
+            cancelParkingspaceBookOrder(self.orderInfoDic?.valueForKey("id") as! String)
         }
         
     }
     
     func cancelBikeBookOrder(orderId: String){
         var request = HttpRequest(url: "bikeBook.php", parameters: ["tag": "cancel", "UUID": orderId])
+        var json = request.getJsonDecode()
+        if json.valueForKey("error") as! Int == 1 {
+            var alert : UIAlertView = UIAlertView(title: "该订单不存在", message: nil, delegate: nil, cancelButtonTitle: "确定")
+            alert.show()
+        }else{
+            var info: ReserveOrderViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ReserveOrderViewController") as! ReserveOrderViewController
+            var alert : UIAlertView = UIAlertView(title: "取消订单成功", message: nil, delegate: nil, cancelButtonTitle: "确定")
+            alert.show()
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
+    }
+    
+    func cancelParkingspaceBookOrder(orderId: String){
+        var request = HttpRequest(url: "parkingspaceBook.php", parameters: ["tag": "cancel", "UUID": orderId])
         var json = request.getJsonDecode()
         if json.valueForKey("error") as! Int == 1 {
             var alert : UIAlertView = UIAlertView(title: "该订单不存在", message: nil, delegate: nil, cancelButtonTitle: "确定")

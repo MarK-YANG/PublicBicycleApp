@@ -25,6 +25,11 @@
 		4DA08C8C1B00E6D5009671BF /* ReserveOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA08C8B1B00E6D5009671BF /* ReserveOrderViewController.swift */; };
 		4DA08C8E1B00F66D009671BF /* OrderTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA08C8D1B00F66D009671BF /* OrderTypeViewController.swift */; };
 		4DA08C911B021658009671BF /* AddBookOrderSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA08C901B021658009671BF /* AddBookOrderSuccess.swift */; };
+		4DA08C971B022966009671BF /* BlueUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA08C961B022966009671BF /* BlueUITableViewController.swift */; };
+		4DA08C991B023518009671BF /* OrderListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA08C981B023518009671BF /* OrderListTableViewController.swift */; };
+		4DA08C9B1B023971009671BF /* BookOrderDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA08C9A1B023971009671BF /* BookOrderDetailTableViewController.swift */; };
+		4DA08C9D1B023AE7009671BF /* FinishOrderDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA08C9C1B023AE7009671BF /* FinishOrderDetailTableViewController.swift */; };
+		4DA08C9F1B023C04009671BF /* RentOrderDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA08C9E1B023C04009671BF /* RentOrderDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +93,11 @@
 		4DA08C8B1B00E6D5009671BF /* ReserveOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveOrderViewController.swift; sourceTree = "<group>"; };
 		4DA08C8D1B00F66D009671BF /* OrderTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTypeViewController.swift; sourceTree = "<group>"; };
 		4DA08C901B021658009671BF /* AddBookOrderSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookOrderSuccess.swift; sourceTree = "<group>"; };
+		4DA08C961B022966009671BF /* BlueUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueUITableViewController.swift; sourceTree = "<group>"; };
+		4DA08C981B023518009671BF /* OrderListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListTableViewController.swift; sourceTree = "<group>"; };
+		4DA08C9A1B023971009671BF /* BookOrderDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookOrderDetailTableViewController.swift; sourceTree = "<group>"; };
+		4DA08C9C1B023AE7009671BF /* FinishOrderDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishOrderDetailTableViewController.swift; sourceTree = "<group>"; };
+		4DA08C9E1B023C04009671BF /* RentOrderDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentOrderDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +164,12 @@
 				4D922F271AFF197000DA60D5 /* InfoViewController.swift */,
 				4D922F231AFF193C00DA60D5 /* StationViewController.swift */,
 				4D922F251AFF195B00DA60D5 /* OrderViewController.swift */,
+				4DA08C981B023518009671BF /* OrderListTableViewController.swift */,
+				4DA08C9A1B023971009671BF /* BookOrderDetailTableViewController.swift */,
+				4DA08C9C1B023AE7009671BF /* FinishOrderDetailTableViewController.swift */,
+				4DA08C9E1B023C04009671BF /* RentOrderDetailTableViewController.swift */,
 				4D922FB81AFF976600DA60D5 /* BlueUIViewController.swift */,
+				4DA08C961B022966009671BF /* BlueUITableViewController.swift */,
 				4D922F071AFF037E00DA60D5 /* Main.storyboard */,
 				4D922F0A1AFF037E00DA60D5 /* Images.xcassets */,
 				4D922F0C1AFF037E00DA60D5 /* LaunchScreen.xib */,
@@ -344,13 +359,18 @@
 				4D922FB71AFF972C00DA60D5 /* OrderStationViewController.swift in Sources */,
 				4DA08C911B021658009671BF /* AddBookOrderSuccess.swift in Sources */,
 				4DA08C8E1B00F66D009671BF /* OrderTypeViewController.swift in Sources */,
+				4DA08C991B023518009671BF /* OrderListTableViewController.swift in Sources */,
+				4DA08C9B1B023971009671BF /* BookOrderDetailTableViewController.swift in Sources */,
 				4D92308D1AFFA4AB00DA60D5 /* MyStation.swift in Sources */,
+				4DA08C9F1B023C04009671BF /* RentOrderDetailTableViewController.swift in Sources */,
 				4D922F241AFF193C00DA60D5 /* StationViewController.swift in Sources */,
+				4DA08C971B022966009671BF /* BlueUITableViewController.swift in Sources */,
 				4DA08C8C1B00E6D5009671BF /* ReserveOrderViewController.swift in Sources */,
 				4D922F061AFF037E00DA60D5 /* ViewController.swift in Sources */,
 				4D922F041AFF037E00DA60D5 /* AppDelegate.swift in Sources */,
 				4D922F261AFF195B00DA60D5 /* OrderViewController.swift in Sources */,
 				4D922FBC1AFF9ACC00DA60D5 /* HttpRequest.swift in Sources */,
+				4DA08C9D1B023AE7009671BF /* FinishOrderDetailTableViewController.swift in Sources */,
 				4DA08C861B00CE54009671BF /* StationInfoViewController.swift in Sources */,
 				4D922F281AFF197000DA60D5 /* InfoViewController.swift in Sources */,
 				4D922FB91AFF976600DA60D5 /* BlueUIViewController.swift in Sources */,

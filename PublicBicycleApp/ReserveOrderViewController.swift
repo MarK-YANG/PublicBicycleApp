@@ -128,8 +128,23 @@ class ReserveOrderViewController: UITableViewController, OrderStationViewDelegat
                     //add order failed
                     
                     if(response.valueForKey("error_msg") as! String == "cannot create another order with a unfinished order !" ){
-                        //
+                        //there is an unfinished order
+                        var alert : UIAlertView = UIAlertView(title: "不可以同时创建两个预约订单，请先完成未完成的预约订单", message: nil, delegate: nil, cancelButtonTitle: "确定")
+                        alert.show()
+                    }else if (response.valueForKey("error_msg") as! String == "There is no available bikes at this station!"){
+                        
+                        //there is no available parkingspace
+                        var alert : UIAlertView = UIAlertView(title: "该服务站没有可预约的自行车停车位，请选择其他服务站", message: nil, delegate: nil, cancelButtonTitle: "确定")
+                        alert.show()
                     }
+                }else{
+                    //add order success
+                    var parkingspaceOrderInfo = response.valueForKey("order") as! NSDictionary
+
+                    var info: AddBookOrderSuccess = self.storyboard?.instantiateViewControllerWithIdentifier("AddBookOrderSuccess") as! AddBookOrderSuccess
+                    info.orderInfoDic = parkingspaceOrderInfo
+                    info.orderType = "ParkingspaceBook"
+                    self.navigationController?.pushViewController(info, animated: true)
                 }
             }
         }
