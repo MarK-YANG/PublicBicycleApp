@@ -12,7 +12,7 @@ import SwiftHTTP
 
 class HttpRequest: NSObject{
     
-    let baseURL: String = "http://192.168.1.111/PublicBicycleReservationSystem/APP/API/"
+    let baseURL: String = "http://10.20.46.130/PublicBicycleReservationSystem/APP/API/"
     var URL:String
     var parameters: Dictionary<String, AnyObject>
     var jsonCode = NSDictionary()
@@ -75,10 +75,14 @@ class HttpRequest: NSObject{
     
     func getJsonDecode()-> NSDictionary{
         doPOST()
+        
+        var iCount = 0
+        
         while true{
             if self.requestStates{
                 break
             }
+            iCount++
         }
         return self.jsonCode
     }

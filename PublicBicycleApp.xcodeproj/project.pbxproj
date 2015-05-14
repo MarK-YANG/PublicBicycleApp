@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D11C7B31B04BCFA00FE2458 /* CustomerInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11C7B21B04BCFA00FE2458 /* CustomerInfoTableViewController.swift */; };
+		4D11C7B91B04CDC200FE2458 /* changePasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11C7B81B04CDC200FE2458 /* changePasswordTableViewController.swift */; };
 		4D91BA1F1B00B2FB00456EE5 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91BA181B00B2F500456EE5 /* SwiftHTTP.framework */; };
 		4D922F041AFF037E00DA60D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D922F031AFF037E00DA60D5 /* AppDelegate.swift */; };
 		4D922F061AFF037E00DA60D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D922F051AFF037E00DA60D5 /* ViewController.swift */; };
@@ -71,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D11C7B21B04BCFA00FE2458 /* CustomerInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerInfoTableViewController.swift; sourceTree = "<group>"; };
+		4D11C7B81B04CDC200FE2458 /* changePasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changePasswordTableViewController.swift; sourceTree = "<group>"; };
 		4D91BA101B00B2F500456EE5 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = ../../GitHub/SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
 		4D922EFE1AFF037E00DA60D5 /* PublicBicycleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublicBicycleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D922F021AFF037E00DA60D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				4DA08C851B00CE54009671BF /* StationInfoViewController.swift */,
 				4D922FB61AFF972C00DA60D5 /* OrderStationViewController.swift */,
 				4DA08C8D1B00F66D009671BF /* OrderTypeViewController.swift */,
+				4D11C7B21B04BCFA00FE2458 /* CustomerInfoTableViewController.swift */,
+				4D11C7B81B04CDC200FE2458 /* changePasswordTableViewController.swift */,
 				4D922F271AFF197000DA60D5 /* InfoViewController.swift */,
 				4D922F231AFF193C00DA60D5 /* StationViewController.swift */,
 				4D922F251AFF195B00DA60D5 /* OrderViewController.swift */,
@@ -358,10 +364,12 @@
 			files = (
 				4D922FB71AFF972C00DA60D5 /* OrderStationViewController.swift in Sources */,
 				4DA08C911B021658009671BF /* AddBookOrderSuccess.swift in Sources */,
+				4D11C7B91B04CDC200FE2458 /* changePasswordTableViewController.swift in Sources */,
 				4DA08C8E1B00F66D009671BF /* OrderTypeViewController.swift in Sources */,
 				4DA08C991B023518009671BF /* OrderListTableViewController.swift in Sources */,
 				4DA08C9B1B023971009671BF /* BookOrderDetailTableViewController.swift in Sources */,
 				4D92308D1AFFA4AB00DA60D5 /* MyStation.swift in Sources */,
+				4D11C7B31B04BCFA00FE2458 /* CustomerInfoTableViewController.swift in Sources */,
 				4DA08C9F1B023C04009671BF /* RentOrderDetailTableViewController.swift in Sources */,
 				4D922F241AFF193C00DA60D5 /* StationViewController.swift in Sources */,
 				4DA08C971B022966009671BF /* BlueUITableViewController.swift in Sources */,

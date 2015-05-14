@@ -81,7 +81,7 @@ class OrderListTableViewController: BlueUIViewController, UITableViewDataSource 
                 var customerId = cell.viewWithTag(103) as! UILabel
                 var customerName = cell.viewWithTag(104) as! UILabel
                 image.image = UIImage(named: "HistoricalBikeOrder")
-                title.text = "历史预约自行车订单"
+                title.text = "历史自行车预约订单"
                 
                 if emptyFlag == 1 {
                     customerId.text = "没有查询到历史自行车预约订单"
@@ -119,7 +119,7 @@ class OrderListTableViewController: BlueUIViewController, UITableViewDataSource 
                 var customerId = cell.viewWithTag(103) as! UILabel
                 var customerName = cell.viewWithTag(104) as! UILabel
                 image.image = UIImage(named: "HistoricalParkingspaceOrder")
-                title.text = "历史预约停车位订单"
+                title.text = "历史停车位预约订单"
                 
                 if emptyFlag == 1 {
                     customerId.text = "没有查询到历史停车位预约订单"
@@ -156,7 +156,7 @@ class OrderListTableViewController: BlueUIViewController, UITableViewDataSource 
                 var title = cell.viewWithTag(102) as! UILabel
                 var customerId = cell.viewWithTag(103) as! UILabel
                 var customerName = cell.viewWithTag(104) as! UILabel
-                image.image = UIImage(named: "HistoricalParkingspaceOrder")
+                image.image = UIImage(named: "HistoricalRentOrder")
                 title.text = "历史租车订单"
                 
                 if emptyFlag == 1 {
