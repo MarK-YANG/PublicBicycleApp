@@ -10,10 +10,13 @@
 import UIKit
 
 class OrderViewController: BlueUITableViewController, UITableViewDelegate{
+    
+    var customerId: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        var user = NSUserDefaults.standardUserDefaults()
+        customerId = user.objectForKey("customer_id") as! String
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,10 +29,7 @@ class OrderViewController: BlueUITableViewController, UITableViewDelegate{
         
         if indexPath.row == 0{
             
-            //getCustomerId
-            let customerId = "emp.yangchunyu@gmail.com"
-            
-            var result = getUnfinishedBikeBookOrder(customerId)
+            var result = getUnfinishedBikeBookOrder(self.customerId)
             if(result.count == 0){
                 //dont have book order
                 
@@ -44,10 +44,8 @@ class OrderViewController: BlueUITableViewController, UITableViewDelegate{
 
             
         }else if indexPath.row == 1{
-            //getCustomerId
-            let customerId = "emp.yangchunyu@gmail.com"
             
-            var result = getUnfinishedParkingspaceBookOrder(customerId)
+            var result = getUnfinishedParkingspaceBookOrder(self.customerId)
             if(result.count == 0){
                 //dont have book order
                 

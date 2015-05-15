@@ -26,6 +26,7 @@ class ReserveOrderViewController: UITableViewController, OrderStationViewDelegat
     
     var currentStation: MyStation?
     var orderType: Int?
+    var customerId: String?
     
     func getOrderInfo(_station: MyStation) {
         currentStation = _station
@@ -53,9 +54,9 @@ class ReserveOrderViewController: UITableViewController, OrderStationViewDelegat
         
         let navigationTitleAttribute : NSDictionary = NSDictionary(objectsAndKeys: UIColor.whiteColor(),NSForegroundColorAttributeName)
         self.navigationController?.navigationBar.titleTextAttributes = navigationTitleAttribute as [NSObject : AnyObject]
-        //tabBarController
-        //self.tabBarController?.tabBar.barTintColor = mainColor
-        //self.tabBarController?.tabBar.tintColor = UIColor.whiteColor()
+
+        var user = NSUserDefaults.standardUserDefaults()
+        self.customerId = user.objectForKey("customer_id") as? String
         
         
     }
@@ -92,7 +93,7 @@ class ReserveOrderViewController: UITableViewController, OrderStationViewDelegat
                 
                 //request to the web server
                 var customerId = "emp.yangchunyu@gmail.com"
-                var response = createBikeBookOrder(customerId, stationId: currentStation!.station_id) as NSDictionary
+                var response = createBikeBookOrder(self.customerId!, stationId: currentStation!.station_id) as NSDictionary
                 
                 if(response.valueForKey("error") as! Int == 1){
                     
@@ -121,8 +122,7 @@ class ReserveOrderViewController: UITableViewController, OrderStationViewDelegat
                 
             }else if orderType == 1{
                 //request to the web server
-                var customerId = "emp.yangchunyu@gmail.com"
-                var response = createParkingspaceBookOrder(customerId, stationId: currentStation!.station_id) as NSDictionary
+                var response = createParkingspaceBookOrder(self.customerId!, stationId: currentStation!.station_id) as NSDictionary
                 
                 if(response.valueForKey("error") as! Int == 1){
                     //add order failed

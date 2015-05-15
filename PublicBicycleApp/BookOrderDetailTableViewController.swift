@@ -24,19 +24,15 @@ class BookOrderDetailTableViewController: BlueUITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var user = NSUserDefaults.standardUserDefaults()
+        let currentCustomerId = user.objectForKey("customer_id") as? String
         if orderType == "Bike" {
             self.OrderTitle.text = "自行车预约订单"
             
-            //get CustomerID
-            let currentCustomerId = "emp.yangchunyu@gmail.com"
-            
-            self.OrderDetail = getUnfinishedBikeBookOrder(currentCustomerId)
+            self.OrderDetail = getUnfinishedBikeBookOrder(currentCustomerId!)
         }else if orderType == "Parkingspace" {
             self.OrderTitle.text = "停车位预约订单"
-            //get CustomerID
-            let currentCustomerId = "emp.yangchunyu@gmail.com"
-            
-            self.OrderDetail = getUnfinishedParkingspaceBookOrder(currentCustomerId)
+            self.OrderDetail = getUnfinishedParkingspaceBookOrder(currentCustomerId!)
         }
         
         

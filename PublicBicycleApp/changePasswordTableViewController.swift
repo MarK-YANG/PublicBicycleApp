@@ -18,7 +18,8 @@ class changePasswordTableViewController: BlueUITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        customerId = "emp.yangchunyu@gmail.com"
+        var user = NSUserDefaults.standardUserDefaults()
+        customerId = user.objectForKey("customer_id") as? String
         // Do any additional setup after loading the view.
     }
 

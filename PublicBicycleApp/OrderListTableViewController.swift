@@ -13,7 +13,7 @@ class OrderListTableViewController: BlueUIViewController, UITableViewDataSource 
     var OrderType: Int?
     var emptyFlag = 0
     var orderArray: NSArray?
-    var customerId: String?
+    var customerId: String = ""
 
     @IBOutlet var myTableView: UITableView!
     
@@ -22,11 +22,12 @@ class OrderListTableViewController: BlueUIViewController, UITableViewDataSource 
         
         //getCustomerId
 //         self.customerId = "test@test.com"
-        self.customerId = "emp.yangchunyu@gmail.com"
+        var user = NSUserDefaults.standardUserDefaults()
+        customerId = user.objectForKey("customer_id") as! String
         
         if OrderType == 2 {
             
-            let result =  getFinishBikeBookOrder(customerId!)
+            let result =  getFinishBikeBookOrder(customerId)
             
             if result.count == 0 {
                 emptyFlag = 1
@@ -36,7 +37,7 @@ class OrderListTableViewController: BlueUIViewController, UITableViewDataSource 
             
         }else if OrderType == 3{
             
-            let result =  getFinishParkingspaceBookOrder(customerId!)
+            let result =  getFinishParkingspaceBookOrder(customerId)
             
             if result.count == 0 {
                 emptyFlag = 1
@@ -45,7 +46,7 @@ class OrderListTableViewController: BlueUIViewController, UITableViewDataSource 
             }
             
         }else if OrderType == 4{
-            let result =  getFinishRentOrder(customerId!)
+            let result =  getFinishRentOrder(customerId)
             
             if result.count == 0 {
                 emptyFlag = 1

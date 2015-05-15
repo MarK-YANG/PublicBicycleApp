@@ -29,10 +29,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         let navigationTitleAttribute : NSDictionary = NSDictionary(objectsAndKeys: UIColor.whiteColor(),NSForegroundColorAttributeName)
         self.navigationController?.navigationBar.titleTextAttributes = navigationTitleAttribute as [NSObject : AnyObject]
-        //tabBarController
-        //self.tabBarController?.tabBar.barTintColor = mainColor
-        //self.tabBarController?.tabBar.tintColor = UIColor.whiteColor()
-        
 
     }
     
